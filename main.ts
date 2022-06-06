@@ -14,6 +14,7 @@ input.onButtonPressed(Button.A, function () {
     music.playTone(247, music.beat(BeatFraction.Whole))
     music.playTone(262, music.beat(BeatFraction.Whole))
 })
+music.playTone(494, music.beat(BeatFraction.Whole))
 basic.forever(function () {
     serial.writeLine("" + (sonar.ping(
     DigitalPin.P1,
@@ -25,9 +26,4 @@ basic.forever(function () {
     DigitalPin.P2,
     PingUnit.Centimeters
     ))
-})
-basic.forever(function () {
-    music.playTone(880, music.beat(BeatFraction.Half))
-    basic.pause(200)
-    music.playTone(988, music.beat(BeatFraction.Half))
 })
